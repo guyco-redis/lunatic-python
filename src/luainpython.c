@@ -479,7 +479,7 @@ PyObject *Lua_run(PyObject *args, int eval)
     char *s;
     int len;
 
-    if (!PyArg_ParseTuple(args, "s#", &s, (Py_ssize_t)&len))
+    if (!PyArg_ParseTuple(args, "s#", &s, &len))
         return NULL;
 
     if (eval) {
